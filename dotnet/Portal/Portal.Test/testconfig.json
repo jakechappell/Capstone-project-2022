@@ -1,0 +1,40 @@
+{
+  "AllowedHosts": "*",
+  "RootURL": {
+    "Url": "https://ballstatetestingwebapi.accutech-systems.net",
+    "JsonUrl": "https://ballstatetestingwebapi.accutech-systems.net/swagger/v6/swagger.json"
+  },
+  "EmailSettings": {
+    "FromEmail": "bsu495devportal@gmail.com",
+    "DisplayName": "Dev Portal",
+    "Password": "portal495",
+    "Host": "smtp.gmail.com",
+    "Port": 587,
+    "ToEmail": "jfchappell@bsu.edu",
+    "Enabled": false
+  },
+  "LoginInfo": {
+    "Jwt": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.asahdoflaskjfhgireubra87237r327.3297yasdjklfghasdf9823yr.3298092ytlkjdgdaify923r",
+    "ExpiresIn": "",
+    "IssuedDateTime": "",
+    "ExpirationDateTime": ""
+  },
+  "ConnectionStrings": {
+    "CheetahTestDatabase": "Server=(local);Database=CheetahDBTest;Trusted_Connection=True;"
+  },
+  "TestResponse_1":
+    {
+      "AccountGroupId": 1,
+      "AccountGroupName": "Trace's Group",
+      "AccountGroupLongName": "Trace's Group",
+      "ParentAccountGroupId": 0,
+      "InvestmentObjectiveId": 0,
+      "IsStatementGroup": true,
+      "IsRelationshipView": true,
+      "IsForInvestmentProcessing": false,
+      "IsActive": true,
+      "MarketValueAmount": 0.0,
+      "AvailableCashAmount": 0.0,
+      "AccountsInGroup": 4
+    }
+}

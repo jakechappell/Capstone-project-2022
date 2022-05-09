@@ -1,0 +1,38 @@
+version: '3'
+services:
+  dev-portal-db:
+    container_name: dev-portal-db
+    image: mcr.microsoft.com/mssql/server
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./databases/:/var/opt/mssql/databases
+    environment:
+      SA_PASSWORD: "dev_portal495"
+      ACCEPT_EULA: "Y"
+    build:
+      context: ./databases
+      dockerfile: Dockerfile
+  dev-portal-vue:
+    container_name: dev-portal-vue
+    build:
+      context: ./
+      dockerfile: ./vue/Dockerfile
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./vue/:/vue
+    command: npm run serve
+  dev-portal-dotnet:
+    container_name: dev-portal-dotnet
+    ports:
+      - "5001:5001"
+      - "5000:5000"
+    # volumes:
+    #   - ./dotnet/:/dotnet
+    build:
+      context: ./
+      dockerfile: ./dotnet/Dockerfile
+    depends_on:
+      - dev-portal-db
+    

@@ -1,0 +1,1 @@
+./../../buildPortal.sh & dotnet run Portal.dll

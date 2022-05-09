@@ -1,0 +1,19 @@
+{
+    "workflows": [
+        {
+            "name": "Creating Cheetah API Keys",
+            "accordKey": "apiKeys",
+            "content": "<p>Cheetah API keys are created by the Cheetah API and are used to authenticate the user or users' program.</p><p>To create an API key:</p><ul><li>Navigate to the <a href=\"https://ballstatetesting.accutech-systems.net/\">Cheetah UI</a></li><br><li>In the Cheetah UI, navigate to <em>Configuration -> Security -> API Keys</em></li><p class=\"pl-4\"><small>If this link is not available, someone from your institution will need to add the API Key security functions to your Cheetah user’s security group.</small></p></ul><p class=\"text-red-600\"><strong>! Recommendation: create a new API key for each separate developer who will work with the Cheetah API !</strong></p>"
+        },
+        {
+            "name": "Generating a Cheetah API Token",
+            "accordKey": "token",
+            "content": "<p><em>Prerequisites: A Cheetah API key and Cheetah user credentials</em></p><p>All API endpoints are secured by Basic authorization and JSON Web Tokens (JWTs). To get a token:</p><ul><li>Make a <strong>POST</strong> request to <strong>{your API URL}/api/v6/Token</strong> with the following headers:</li><ul class=\"list-disc\"><li>Content-Type of 'application/json'</li><li>Your API key</li><li>User credentials in the format of <em>username:password</em>, encoded in base 64</li>(e.g. dXNlcm5hbWU6cGFzc3dvcmQ=)</ul></ul><p>If successful, this POST Token call will return a JWT, along with data such as the expiration time. All Cheetah tokens expire after 60 minutes.</p>"
+        },
+        {
+            "name": "Using the Cheetah API Docs test console",
+            "accordKey": "console",
+            "content": "<ol class=\"list-decimal\"><li>Navigate to the <a href=\"/references\">References</a> page</li><small>On the left-hand side, you will see a sidebar with API <em>Collections</em>and API <em>Endpoints</em>.</small><br><small><em>Collections</em> refer to the group of API endpoints (e.g. <em>Accounts</em> or <em>Approval</em>).</small><br><small><em>Endpoints</em> refer to the each actual API endpoint that a call can be made to.</small><li>Choose the endpoint you wish to test</li></ol>"
+        }
+    ]
+}

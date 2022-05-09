@@ -1,0 +1,16 @@
+FROM mcr.microsoft.com/dotnet/sdk:5.0
+
+COPY . .
+
+# expose whatever port used to run the back-end swagger page
+EXPOSE 5000
+ENV ASPNETCORE_URLS=http://+:5000
+ENV ASPNETCORE_ENVIRONMENT Development
+
+WORKDIR /bsu.developer-portal/dotnet/Portal/Portal
+
+RUN dotnet build "Portal.csproj"
+
+WORKDIR /bsu.developer-portal/dotnet/Portal/Portal/bin/Debug/net5.0/
+
+CMD [ "dotnet", "Portal.dll" ]
